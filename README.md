@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+# Modern React Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional, responsive, and interactive personal portfolio website built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+![Portfolio Preview](./public/preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+-   **Custom Space Animation**: Interactive 3D starfield with floating geometric shapes (Three.js).
+-   **Responsive Design**: Fully responsive layout that looks great on mobile, tablet, and desktop.
+-   **Dark Theme**: Modern dark aesthetic with cyan/teal accents.
+-   **Interactive Elements**: Typewriter text effect, smooth scrolling, and hover animations.
+-   **Performance Optimized**: Fast loading speeds and optimized assets.
+-   **SEO Friendly**: Includes meta tags and semantic HTML structure.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+-   **React 19**: Modern UI library.
+-   **TypeScript**: Type safety and better developer experience.
+-   **Tailwind CSS v4**: Utility-first CSS framework for styling.
+-   **Three.js**: 3D graphics library for the space background.
+-   **Vite**: Next-generation frontend tooling.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📝 Customization
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+You can easily customize this portfolio with your own information.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  **Open `src/data/portfolio.ts`**: This file contains all the data for the website.
+2.  **Update Personal Info**: Change the `personalInfo` object with your name, title, email, etc.
+3.  **Update Skills**: Modify the `skillCategories` array to list your own skills.
+4.  **Add Projects**: Update the `projects` array with your own work.
+5.  **Update Experience & Education**: Edit the `experiences` and `education` arrays.
+6.  **Resume**: Replace `public/resume.pdf` with your actual resume file.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📦 Installation & Local Development
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/portfolio.git
+    cd portfolio
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3.  **Start the development server**:
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## 🚀 Deployment
+
+This project is ready to be deployed on platforms like Vercel or Netlify.
+
+### Vercel (Recommended)
+
+1.  Create a [Vercel account](https://vercel.com/).
+2.  Install Vercel CLI: `npm i -g vercel`
+3.  Run `vercel` in the project root.
+4.  Follow the prompts to deploy.
+
+**OR**
+
+1.  Push your code to a GitHub repository.
+2.  Go to the Vercel dashboard and click "Add New Project".
+3.  Import your GitHub repository.
+4.  Click "Deploy". Vercel will automatically detect Vite settings.
+
+### Netlify
+
+1.  Create a [Netlify account](https://www.netlify.com/).
+2.  Drag and drop the `dist` folder (created after running `npm run build`) to the Netlify dashboard.
+
+**OR**
+
+1.  Push your code to GitHub.
+2.  "New Site from Git" in Netlify dashboard.
+3.  Connect your repository.
+4.  Build command: `npm run build`
+5.  Publish directory: `dist`
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
