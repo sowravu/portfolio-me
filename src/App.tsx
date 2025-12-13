@@ -7,12 +7,12 @@ import Projects from './components/Projects';
 
 
 import Contact from './components/Contact';
-import { useVanta } from './hooks/useVanta';
+import { useStars } from './hooks/useVanta';
 import './index.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
-  const vantaRef = useVanta();
+  const starsRef = useStars();
 
   useEffect(() => {
     const sections = ['home', 'about', 'skills', 'projects', 'contact'];
@@ -50,9 +50,9 @@ function App() {
 
   return (
     <div className="App">
-      {/* Global Vanta.js Background */}
-      <div
-        ref={vantaRef}
+      {/* Falling Stars Background */}
+      <canvas
+        ref={starsRef}
         className="fixed inset-0 -z-10"
         style={{ width: '100%', height: '100%' }}
       />

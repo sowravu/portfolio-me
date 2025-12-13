@@ -5,7 +5,7 @@ const Skills = () => {
         <section id="skills" className="section-container">
             <div className="max-w-6xl mx-auto w-full">
                 <h2 className="section-title">
-                    My <span className="gradient-text">Skills</span>
+                    <span className="gradient-text">Skills</span>
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
