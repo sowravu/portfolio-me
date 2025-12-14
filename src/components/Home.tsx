@@ -42,7 +42,7 @@ const Home = () => {
                     </p>
 
                     {/* Name container with nowrap to enforce single line */}
-                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 animate-fade-in text-light-cream tracking-tight leading-tight whitespace-nowrap">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 animate-fade-in text-light-cream tracking-tight leading-tight whitespace-nowrap">
                         {personalInfo.name}
                     </h1>
 
