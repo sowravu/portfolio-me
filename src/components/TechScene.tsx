@@ -56,7 +56,7 @@ const TechScene = () => {
                 <div
                     key={index}
                     // Added transparency (opacity-50) and kept hover effect
-                    className={`absolute ${position} animate-float opacity-50 hover:opacity-100 transition-opacity duration-300`}
+                    className={`absolute ${position} animate-float opacity-30 hover:opacity-100 transition-opacity duration-300`}
                     style={{
                         animationDelay: delay,
                         filter: `drop-shadow(0 0 5px ${greenColor}20)`

@@ -62,10 +62,10 @@ const Home = () => {
                         <a
                             href={personalInfo.resume}
                             download
-                            className="btn-primary inline-block min-w-[160px]"
+                            className="px-8 py-3 bg-white/80 backdrop-blur-sm text-primary-dark font-semibold rounded-md transition-all duration-300 hover:bg-accent-cyan hover:text-white hover:shadow-lg hover:shadow-accent-cyan/30 inline-block min-w-[160px]"
                             aria-label="Download Resume"
                         >
-                            Download Resume
+                            Download CV
                         </a>
 
                         <button
