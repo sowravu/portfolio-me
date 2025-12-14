@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { personalInfo } from '../data/portfolio';
+import TechScene from './TechScene';
 
 const Home = () => {
     const [typedText, setTypedText] = useState('');
@@ -33,42 +34,60 @@ const Home = () => {
 
 
             {/* Content */}
-            <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 animate-fade-in text-accent-cyan">
-                    {personalInfo.name}
-                </h1>
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium mb-6 text-gray-200 min-h-[1.5em]">
-                    {typedText}
-                    <span className="animate-pulse">|</span>
-                </h2>
+                <div className="flex-1 text-center md:text-left z-20">
+                    <p className="text-lg sm:text-xl md:text-2xl text-accent-cyan font-medium mb-4 animate-fade-in tracking-wide">
+                        Hi, I'm
+                    </p>
 
-                <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 text-gray-300 leading-relaxed">
-                    {personalInfo.tagline}
-                </p>
+                    {/* Name container with nowrap to enforce single line */}
+                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 animate-fade-in text-light-cream tracking-tight leading-tight whitespace-nowrap">
+                        {personalInfo.name}
+                    </h1>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a
-                        href={personalInfo.resume}
-                        download
-                        className="btn-primary inline-block"
-                        aria-label="Download Resume"
-                    >
-                        Download Resume
-                    </a>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-gray-400 min-h-[1.5em] flex items-center justify-center md:justify-start gap-2">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-accent-teal">
+                            {typedText}
+                        </span>
+                        <span className="animate-pulse text-accent-cyan">|</span>
+                    </h2>
 
-                    <button
-                        onClick={scrollToContact}
-                        className="btn-secondary"
-                        aria-label="Contact Me"
-                    >
-                        Contact Me
-                    </button>
+                    <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto md:mx-0 mb-10 text-gray-300 leading-relaxed font-light">
+                        {personalInfo.tagline}
+                    </p>
+
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
+                        <a
+                            href={personalInfo.resume}
+                            download
+                            className="btn-primary inline-block min-w-[160px]"
+                            aria-label="Download Resume"
+                        >
+                            Download Resume
+                        </a>
+
+                        <button
+                            onClick={scrollToContact}
+                            className="btn-secondary min-w-[160px]"
+                            aria-label="Contact Me"
+                        >
+                            Contact Me
+                        </button>
+                    </div>
                 </div>
 
-                {/* Scroll Indicator */}
-                <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                {/* Tech Constellation Scene */}
+                <div className="hidden md:block flex-1 h-[500px]">
+                    <TechScene />
+                </div>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div className="flex flex-col items-center gap-2 text-gray-500 text-sm tracking-widest uppercase">
+                    <span>Scroll</span>
                     <svg
                         className="w-6 h-6 text-accent-cyan"
                         fill="none"

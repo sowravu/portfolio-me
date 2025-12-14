@@ -5,7 +5,7 @@ const About = () => {
         <section id="about" className="section-container">
             <div className="max-w-4xl mx-auto">
                 <h2 className="section-title">
-                    About <span className="gradient-text">Me</span>
+                     <span className="gradient-text">About</span>
                 </h2>
 
                 <div className="space-y-6 text-lg leading-relaxed">
