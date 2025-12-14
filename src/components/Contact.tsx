@@ -89,7 +89,7 @@ const Contact = () => {
         <section id="contact" className="section-container">
             <div className="max-w-4xl mx-auto w-full">
                 <h2 className="section-title">
-                    Get In <span className="gradient-text">Touch</span>
+                    <span className="gradient-text">LET'S TALK</span>
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
