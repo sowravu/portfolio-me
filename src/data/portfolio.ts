@@ -6,7 +6,7 @@ export const personalInfo: PersonalInfo = {
     tagline: "Building digital products that hold strong under scale, shaped by logic, curiosity, and continuous improvement.",
     email: "sowravuusuresh@gmail.com",
     github: "https://github.com/sowravu",
-    linkedin: "https://www.linkedin.com/in/sowravu-suresh-5349aa306/",
+    linkedin: "https://www.linkedin.com/in/sowravu/",
     twitter: "https://x.com/sowravu_suresh",
     phone: "+919074984765",
     location: "India, Kerala",
@@ -146,7 +146,7 @@ export const experiences: Experience[] = [
             "Wrote comprehensive unit and integration tests",
             "Participated in agile development processes and daily standups"
         ]
-    } 
+    }
 ];
 
 export const education: Education[] = [
