@@ -36,12 +36,12 @@ const skillIcons: Record<string, { icon: IconType, color: string }> = {
 const Skills = () => {
     return (
         <section id="skills" className="section-container">
-            <div className="max-w-6xl mx-auto w-full px-4">
+            <div className="max-w-4xl mx-auto w-full px-4">
                 <h2 className="section-title">
                     SKILLS
                 </h2>
 
-                <div className="space-y-12">
+                <div className="space-y-8">
                     {skillCategories.map((category, index) => (
                         <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
                             <h3 className="text-xl md:text-2xl text-gray-400 mb-6 font-light border-b border-gray-800/50 pb-2 inline-block">
@@ -56,17 +56,17 @@ const Skills = () => {
                                     return (
                                         <div
                                             key={skillIndex}
-                                            className="group flex items-center gap-4 bg-[#111111] border border-white/5 
-                                                     px-6 py-4 rounded-xl hover:bg-white/5 hover:border-white/10 
+                                            className="group flex items-center gap-3 bg-[#111111] border border-white/5 
+                                                     px-4 py-2.5 rounded-lg hover:bg-white/5 hover:border-white/10 
                                                      transition-all duration-300 cursor-default"
                                         >
                                             <div className="p-1 rounded bg-white/5 group-hover:bg-white/10 transition-colors">
                                                 <Icon
-                                                    className="w-6 h-6"
+                                                    className="w-5 h-5"
                                                     style={{ color: IconData.color === "#000000" && '#ffffff' ? '#ffffff' : IconData.color }}
                                                 />
                                             </div>
-                                            <span className="font-medium text-lg text-gray-300 group-hover:text-white transition-colors">
+                                            <span className="font-medium text-sm text-gray-300 group-hover:text-white transition-colors">
                                                 {skill.name}
                                             </span>
                                         </div>

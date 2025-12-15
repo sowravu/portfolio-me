@@ -103,7 +103,7 @@ const Home = () => {
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a
                                 href={personalInfo.resume}
-                                download
+                                download="Sowravu_Suresh_CV.pdf"
                                 className="px-8 py-3 bg-white/80 backdrop-blur-sm text-primary-dark font-semibold rounded-md transition-all duration-300 hover:bg-accent-cyan hover:text-white hover:shadow-lg hover:shadow-accent-cyan/30 inline-block min-w-[160px] text-center"
                                 aria-label="Download Resume"
                             >

@@ -165,7 +165,7 @@ const Contact = () => {
                                             ? 'border-red-500 focus:border-red-500'
                                             : 'border-white/5 focus:border-accent-cyan/50'
                                         }`}
-                                    placeholder="John Doe"
+                                    placeholder="name"
                                 />
                                 {errors.name && (
                                     <p className="text-red-500 text-xs mt-1">{errors.name}</p>
@@ -186,7 +186,7 @@ const Contact = () => {
                                             ? 'border-red-500 focus:border-red-500'
                                             : 'border-white/5 focus:border-accent-cyan/50'
                                         }`}
-                                    placeholder="john@example.com"
+                                    placeholder="sowravu@example.com"
                                 />
                                 {errors.email && (
                                     <p className="text-red-500 text-xs mt-1">{errors.email}</p>
