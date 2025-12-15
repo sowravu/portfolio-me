@@ -56,18 +56,18 @@ const TechScene = () => {
                 <div
                     key={index}
                     // Added transparency (opacity-50) and kept hover effect
-                    className={`absolute ${position} animate-float opacity-30 hover:opacity-100 transition-opacity duration-300`}
+                    className={`absolute ${position} animate-float opacity-30 hover:opacity-100 transition-all duration-500 ease-in-out cursor-pointer pointer-events-auto z-30`}
                     style={{
                         animationDelay: delay,
-                        filter: `drop-shadow(0 0 5px ${greenColor}20)`
+                        filter: `drop-shadow(0 0 5px ${greenColor}40)`
                     }}
                 >
                     <div className="relative group">
                         {/* Glow effect */}
-                        <div className="absolute inset-0 bg-accent-cyan/10 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute inset-0 bg-accent-cyan/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                         <Icon
-                            className={`${size} transform hover:scale-110 transition-transform duration-300`}
+                            className={`${size} transform group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500 ease-out`}
                             style={{ color: greenColor }}
                         />
                     </div>

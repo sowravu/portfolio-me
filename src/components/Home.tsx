@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { personalInfo } from '../data/portfolio';
 import TechScene from './TechScene';
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 
 const Home = () => {
     const [typedText, setTypedText] = useState('');
@@ -17,7 +20,7 @@ const Home = () => {
                 clearInterval(intervalId);
                 return prev;
             });
-        }, 100); // Typing speed
+        }, 100);
 
         return () => clearInterval(intervalId);
     }, [fullText]);
@@ -54,27 +57,67 @@ const Home = () => {
                     </h2>
 
                     <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto md:mx-0 mb-10 text-gray-300 leading-relaxed font-light">
-                        {personalInfo.tagline}
+                        Building digital products that hold strong under scale, shaped by logic, curiosity, and continuous improvement
                     </p>
 
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
-                        <a
-                            href={personalInfo.resume}
-                            download
-                            className="px-8 py-3 bg-white/80 backdrop-blur-sm text-primary-dark font-semibold rounded-md transition-all duration-300 hover:bg-accent-cyan hover:text-white hover:shadow-lg hover:shadow-accent-cyan/30 inline-block min-w-[160px]"
-                            aria-label="Download Resume"
-                        >
-                            Download CV
-                        </a>
+                    {/* Social Icons & CV */}
+                    <div className="flex flex-col gap-6 justify-center md:justify-start items-center md:items-start">
+                        <div className="flex items-center gap-4">
+                            <a
+                                href={personalInfo.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-12 h-12 rounded-full bg-[#1e1e1e] flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300 border border-white/5"
+                                aria-label="GitHub"
+                            >
+                                <FaGithub className="w-5 h-5" />
+                            </a>
+                            <a
+                                href={personalInfo.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-12 h-12 rounded-full bg-[#1e1e1e] flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300 border border-white/5"
+                                aria-label="LinkedIn"
+                            >
+                                <FaLinkedinIn className="w-5 h-5" />
+                            </a>
+                            <a
+                                href={personalInfo.twitter}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-12 h-12 rounded-full bg-[#1e1e1e] flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300 border border-white/5"
+                                aria-label="X (Twitter)"
+                            >
+                                <FaXTwitter className="w-5 h-5" />
+                            </a>
+                            <a
+                                href={`mailto:${personalInfo.email}`}
+                                className="w-12 h-12 rounded-full bg-[#1e1e1e] flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-300 border border-white/5"
+                                aria-label="Email"
+                            >
+                                <IoMdMail className="w-5 h-5" />
+                            </a>
+                        </div>
 
-                        <button
-                            onClick={scrollToContact}
-                            className="btn-secondary min-w-[160px]"
-                            aria-label="Contact Me"
-                        >
-                            Contact Me
-                        </button>
+                        {/* CTA Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <a
+                                href={personalInfo.resume}
+                                download
+                                className="px-8 py-3 bg-white/80 backdrop-blur-sm text-primary-dark font-semibold rounded-md transition-all duration-300 hover:bg-accent-cyan hover:text-white hover:shadow-lg hover:shadow-accent-cyan/30 inline-block min-w-[160px] text-center"
+                                aria-label="Download Resume"
+                            >
+                                Download CV
+                            </a>
+
+                            <button
+                                onClick={scrollToContact}
+                                className="btn-secondary min-w-[160px]"
+                                aria-label="Contact Me"
+                            >
+                                Contact Me
+                            </button>
+                        </div>
                     </div>
                 </div>
 

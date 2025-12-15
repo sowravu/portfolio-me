@@ -3,10 +3,13 @@ import type { PersonalInfo, SkillCategory, Project, Experience, Education } from
 export const personalInfo: PersonalInfo = {
     name: "Sowravu Suresh",
     title: "Full Stack Developer",
-    tagline: "The midscope Rambling at turpe possessional he since tolle odder ré assocites Utility.",
-    email: "john.doe@example.com",
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
+    tagline: "Building digital products that hold strong under scale, shaped by logic, curiosity, and continuous improvement.",
+    email: "sowravuusuresh@gmail.com",
+    github: "https://github.com/sowravu",
+    linkedin: "https://www.linkedin.com/in/sowravu-suresh-5349aa306/",
+    twitter: "https://x.com/sowravu_suresh",
+    phone: "+919074984765",
+    location: "India, Kerala",
     resume: "/resume.pdf"
 };
 
@@ -30,44 +33,41 @@ export const skillCategories: SkillCategory[] = [
         category: "Languages",
         skills: [
             { name: "JavaScript" },
-            { name: "TypeScript" },
-            { name: "Python" },
-            { name: "Java" },
-            { name: "HTML5" },
-            { name: "CSS3" }
+            { name: "TypeScript" }
         ]
     },
     {
-        category: "Frameworks",
+        category: "Frontend",
         skills: [
-            { name: "React" },
+            { name: "React.js" },
             { name: "Next.js" },
+            { name: "HTML5" },
+            { name: "CSS3" },
+            { name: "Tailwind" },
+            { name: "Bootstrap" },
+            { name: "Redux" }
+        ]
+    },
+    {
+        category: "Backend",
+        skills: [
             { name: "Node.js" },
-            { name: "Express" },
-            { name: "Tailwind CSS" },
-            { name: "Vue.js" }
-        ]
-    },
-    {
-        category: "Tools & Technologies",
-        skills: [
-            { name: "Git & GitHub" },
-            { name: "Docker" },
-            { name: "AWS" },
+            { name: "Express.js" },
             { name: "MongoDB" },
-            { name: "PostgreSQL" },
-            { name: "Redis" }
+            { name: "SQL" },
+            { name: "JWT" },
+            { name: "WebSocket" }
         ]
     },
     {
-        category: "Other",
+        category: "Cloud & DevOps",
         skills: [
-            { name: "RESTful APIs" },
-            { name: "GraphQL" },
-            { name: "CI/CD" },
-            { name: "Agile/Scrum" },
-            { name: "Testing (Jest, Cypress)" },
-            { name: "Responsive Design" }
+            { name: "AWS EC2" },
+            { name: "GCP" },
+            { name: "Firebase" },
+            { name: "Nginx" },
+            { name: "Git" },
+            { name: "GitHub" }
         ]
     }
 ];
@@ -75,50 +75,38 @@ export const skillCategories: SkillCategory[] = [
 export const projects: Project[] = [
     {
         id: 1,
-        title: "E-Commerce Platform",
-        description: "A full-featured e-commerce platform with payment integration, inventory management, and admin dashboard.",
-        tech: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-        github: "https://github.com/johndoe/ecommerce-platform",
-        demo: "https://ecommerce-demo.com"
+        title: "DryDelicious",
+        description: "A comprehensive e-commerce platform for premium dry fruits featuring secure payments, inventory tracking, and advanced user management.",
+        tech: ["Node.js", "Express", "MongoDB", "EJS", "Razorpay"],
+        features: [
+            "Razorpay payment gateway integration",
+            "Real-time stock and cart management",
+            "Comprehensive admin dashboard for user and order management",
+            "Discount system with coupon codes",
+            "Return request handling and wallet integration",
+            "Advanced product filtering and sorting",
+            "User profile management with address book"
+        ],
+        // Using a placeholder image relevant to e-commerce/food
+        image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop",
+        github: "https://github.com/sowravu/drydelicious", // Assuming this pattern based on user's github
+        // demo: "https://drydelicious.com" // Commented out as not provided
     },
     {
         id: 2,
-        title: "Real-Time Chat Application",
-        description: "WebSocket-based chat app with rooms, private messaging, and file sharing capabilities.",
-        tech: ["React", "Socket.io", "Express", "Redis", "TypeScript"],
-        github: "https://github.com/johndoe/chat-app",
-        demo: "https://chat-demo.com"
-    },
-    {
-        id: 3,
-        title: "Project Management Tool",
-        description: "Collaborative project management tool with task tracking, team collaboration, and analytics.",
-        tech: ["Next.js", "PostgreSQL", "Prisma", "TypeScript", "Tailwind CSS"],
-        github: "https://github.com/johndoe/project-tool",
-        demo: "https://projects-demo.com"
-    },
-    {
-        id: 4,
-        title: "AI Content Generator",
-        description: "AI-powered content generation tool using OpenAI API with templates and customization options.",
-        tech: ["React", "OpenAI API", "Node.js", "MongoDB"],
-        github: "https://github.com/johndoe/ai-content",
-    },
-    {
-        id: 5,
-        title: "Weather Dashboard",
-        description: "Interactive weather dashboard with forecasts, maps, and weather alerts for multiple locations.",
-        tech: ["Vue.js", "Weather API", "Chart.js", "Tailwind CSS"],
-        github: "https://github.com/johndoe/weather-dashboard",
-        demo: "https://weather-demo.com"
-    },
-    {
-        id: 6,
-        title: "Fitness Tracking App",
-        description: "Mobile-first fitness app with workout tracking, progress charts, and social features.",
-        tech: ["React", "Firebase", "Chart.js", "PWA"],
-        github: "https://github.com/johndoe/fitness-tracker",
-        demo: "https://fitness-demo.com"
+        title: "User Management System",
+        description: "A secure user management application with role-based access control, featuring a complete admin dashboard for user operations and JWT-based authentication.",
+        tech: ["React", "Node.js", "Express", "MongoDB", "Redux", "JWT", "Axios"],
+        features: [
+            "Admin dashboard: Create, Edit, Delete, Block/Unblock users",
+            "Secure JWT authentication with access/refresh tokens",
+            "Axios interceptors for centralized API error handling",
+            "Redux Toolkit for scalable state management",
+            "Protected routes based on verification status",
+            "Real-time state updates and UI feedback"
+        ],
+        image: "https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=2070&auto=format&fit=crop",
+        github: "https://github.com/sowravu/user-management-system"
     }
 ];
 

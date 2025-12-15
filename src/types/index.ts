@@ -5,6 +5,9 @@ export interface PersonalInfo {
     email: string;
     github: string;
     linkedin: string;
+    twitter?: string;
+    phone?: string;
+    location?: string;
     resume: string;
 }
 
@@ -23,6 +26,7 @@ export interface Project {
     title: string;
     description: string;
     tech: string[];
+    features?: string[];
     github?: string;
     demo?: string;
     image?: string;
