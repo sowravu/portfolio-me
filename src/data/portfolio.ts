@@ -146,7 +146,7 @@ export const experiences: Experience[] = [
             "Wrote comprehensive unit and integration tests",
             "Participated in agile development processes and daily standups"
         ]
-    }
+    } 
 ];
 
 export const education: Education[] = [
