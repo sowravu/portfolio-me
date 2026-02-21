@@ -10,7 +10,7 @@ export const personalInfo: PersonalInfo = {
     twitter: "https://x.com/sowravu_suresh",
     phone: "+919074984765",
     location: "India, Kerala",
-    resume: "/resume.pdf"
+    resume: "/Sowravu Suresh  - CV.pdf"
 };
 
 export const about = {
