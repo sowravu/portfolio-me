@@ -90,7 +90,7 @@ export const projects: Project[] = [
         // Using a placeholder image relevant to e-commerce/food
         image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop",
         github: "https://github.com/sowravu/dry-delicious", // Assuming this pattern based on user's github
-        // demo: "https://drydelicious.com" // Commented out as not provided
+        demo: "https://drydelicious.sowravuu.live/"
     },
     {
         id: 2,
