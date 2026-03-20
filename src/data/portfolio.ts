@@ -107,6 +107,23 @@ export const projects: Project[] = [
         ],
         image: "https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=2070&auto=format&fit=crop",
         github: "https://github.com/sowravu/user-management-system"
+    },
+    {
+        id: 3,
+        title: "Tech Blog Application",
+        description: "A full-stack blogging platform built with modern web technologies allowing users to read, write, and interact with blog posts in a clean, responsive, and animated environment.",
+        tech: ["Next.js", "React 19", "Tailwind CSS", "Framer Motion", "JWT", "Cloudinary"],
+        features: [
+            "User Authentication: Secure signup and login using JWT and bcrypt",
+            "Blog Management: Full CRUD operations for blog posts",
+            "Rich Media: Seamless image uploading integrated with Cloudinary",
+            "Engaging Interactions: Leave comments on blog posts",
+            "User Moderation: Built-in user blocking and admin system",
+            "Responsive & Animated UI: Crafted with Tailwind CSS and Framer Motion"
+        ],
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop",
+        github: "https://github.com/sowravu/blog-app",
+        demo: "https://techblog.sowravuu.live/"
     }
 ];
 
