@@ -14,17 +14,15 @@ export const personalInfo: PersonalInfo = {
 };
 
 export const about = {
-    introduction: `I'm a passionate Full Stack Developer with expertise in building modern, scalable web applications. 
-  I love turning complex problems into simple, beautiful, and intuitive solutions.`,
+    introduction: `I'm a passionate Full Stack Developer specializing in Node.js, Express.js, React, and Next.js. I have hands-on experience building scalable, responsive, and user-friendly web applications.`,
 
-    focus: `My current focus is on React, TypeScript, and Node.js ecosystems, creating responsive and 
-  accessible user experiences that make a difference.`,
+    focus: `My current focus is on building robust REST APIs, secure authentication systems, and optimized databases. I love writing clean, maintainable code and solving real-world problems.`,
 
     strengths: [
-        "Problem-solving and analytical thinking",
-        "Clean code and best practices",
-        "Continuous learning and adaptation",
-        "Team collaboration and communication"
+        "Full-Stack Web Development (MERN/PERN)",
+        "REST API Development & Integration",
+        "Clean, Maintainable Code Architecture",
+        "Problem Solving via Data Structures & Algorithms"
     ]
 };
 
@@ -33,7 +31,9 @@ export const skillCategories: SkillCategory[] = [
         category: "Languages",
         skills: [
             { name: "JavaScript" },
-            { name: "TypeScript" }
+            { name: "TypeScript" },
+            { name: "HTML" },
+            { name: "CSS" }
         ]
     },
     {
@@ -41,33 +41,29 @@ export const skillCategories: SkillCategory[] = [
         skills: [
             { name: "React.js" },
             { name: "Next.js" },
-            { name: "HTML5" },
-            { name: "CSS3" },
-            { name: "Tailwind" },
-            { name: "Bootstrap" },
-            { name: "Redux" }
+            { name: "Tailwind CSS" },
+            { name: "Bootstrap" }
         ]
     },
     {
-        category: "Backend",
+        category: "Backend & Databases",
         skills: [
             { name: "Node.js" },
             { name: "Express.js" },
             { name: "MongoDB" },
-            { name: "SQL" },
-            { name: "JWT" },
-            { name: "WebSocket" }
+            { name: "PostgreSQL" },
+            { name: "MySQL" },
+            { name: "SQL" }
         ]
     },
     {
-        category: "Cloud & DevOps",
+        category: "Tools & Concepts",
         skills: [
-            { name: "AWS EC2" },
-            { name: "GCP" },
-            { name: "Firebase" },
-            { name: "Nginx" },
-            { name: "Git" },
-            { name: "GitHub" }
+            { name: "Git & GitHub" },
+            { name: "Postman" },
+            { name: "REST APIs" },
+            { name: "JWT Authentication" },
+            { name: "Data Structures & Algorithms" }
         ]
     }
 ];
@@ -75,93 +71,79 @@ export const skillCategories: SkillCategory[] = [
 export const projects: Project[] = [
     {
         id: 1,
-        title: "DryDelicious",
-        description: "A comprehensive e-commerce platform for premium dry fruits featuring secure payments, inventory tracking, and advanced user management.",
-        tech: ["Node.js", "Express", "MongoDB", "EJS", "Razorpay"],
+        title: "Tech Blog Application",
+        description: "A full-stack blogging platform built with Next.js and React 19 allowing users to read, write, and interact with blog posts in a clean, responsive, and animated environment.",
+        tech: ["Next.js", "React 19", "Tailwind CSS", "Framer Motion", "JWT", "Cloudinary"],
         features: [
-            "Razorpay payment gateway integration",
-            "Real-time stock and cart management",
-            "Comprehensive admin dashboard for user and order management",
-            "Discount system with coupon codes",
-            "Return request handling and wallet integration",
-            "Advanced product filtering and sorting",
-            "User profile management with address book"
+            "Built a full-stack blogging platform with complete CRUD functionality for blog posts",
+            "Implemented secure authentication using JWT and bcrypt",
+            "Integrated Cloudinary for image uploads and media handling",
+            "Developed commenting system and admin-based user moderation",
+            "Designed responsive and animated UI using Tailwind CSS and Framer Motion"
         ],
-        // Using a placeholder image relevant to e-commerce/food
-        image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop",
-        github: "https://github.com/sowravu/dry-delicious", // Assuming this pattern based on user's github
-        demo: "https://drydelicious.sowravuu.live/"
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop",
+        github: "https://github.com/sowravu/blog-app",
+        demo: "https://techblog.sowravuu.live/"
     },
     {
         id: 2,
+        title: "DryDelicious",
+        description: "A comprehensive e-commerce platform for premium dry fruits featuring secure payments, inventory tracking, and advanced user management.",
+        tech: ["Node.js", "Express.js", "MongoDB", "HTML", "CSS", "Bootstrap", "Razorpay"],
+        features: [
+            "Developed a full-featured e-commerce platform for selling dry fruits",
+            "Implemented product catalog, search, and filtering functionality",
+            "Built authentication, cart, and order management system",
+            "Designed responsive UI for seamless experience across devices",
+            "Integrated Razorpay payment gateway with wallet and return handling"
+        ],
+        image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop",
+        github: "https://github.com/sowravu/dry-delicious",
+        demo: "https://drydelicious.sowravuu.live/"
+    },
+    {
+        id: 3,
         title: "User Management System",
         description: "A secure user management application with role-based access control, featuring a complete admin dashboard for user operations and JWT-based authentication.",
-        tech: ["React", "Node.js", "Express", "MongoDB", "Redux", "JWT", "Axios"],
+        tech: ["React", "Node.js", "Express.js", "MongoDB", "Axios", "JWT"],
         features: [
-            "Admin dashboard: Create, Edit, Delete, Block/Unblock users",
-            "Secure JWT authentication with access/refresh tokens",
-            "Axios interceptors for centralized API error handling",
-            "Redux Toolkit for scalable state management",
-            "Protected routes based on verification status",
-            "Real-time state updates and UI feedback"
+            "Built a full-stack application for managing users with CRUD operations",
+            "Developed secure REST APIs and integrated the frontend using Axios",
+            "Designed clean UI using reusable React components",
+            "Secure JWT authentication with access/refresh token rotation"
         ],
         image: "https://images.unsplash.com/photo-1555421689-d68471e189f2?q=80&w=2070&auto=format&fit=crop",
         github: "https://github.com/sowravu/user-management-system"
     },
     {
-        id: 3,
-        title: "Tech Blog Application",
-        description: "A full-stack blogging platform built with modern web technologies allowing users to read, write, and interact with blog posts in a clean, responsive, and animated environment.",
-        tech: ["Next.js", "React 19", "Tailwind CSS", "Framer Motion", "JWT", "Cloudinary"],
+        id: 4,
+        title: "Portfolio Website",
+        description: "A sleek, responsive, and animated personal portfolio showcasing developer projects and skills with performance optimization.",
+        tech: ["HTML", "CSS", "JavaScript", "Vite", "Three.js"],
         features: [
-            "User Authentication: Secure signup and login using JWT and bcrypt",
-            "Blog Management: Full CRUD operations for blog posts",
-            "Rich Media: Seamless image uploading integrated with Cloudinary",
-            "Engaging Interactions: Leave comments on blog posts",
-            "User Moderation: Built-in user blocking and admin system",
-            "Responsive & Animated UI: Crafted with Tailwind CSS and Framer Motion"
+            "Designed and deployed personal portfolio showcasing projects and skills",
+            "Focused on clean UI, responsiveness, and performance optimization",
+            "Interactive background animations for an engaging user experience"
         ],
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop",
-        github: "https://github.com/sowravu/blog-app",
-        demo: "https://techblog.sowravuu.live/"
+        image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2055&auto=format&fit=crop",
+        github: "https://github.com/sowravu/portfolio",
+        demo: "https://sowravuu.live/"
     }
 ];
 
 export const experiences: Experience[] = [
     {
         id: 1,
-        role: "Senior Full Stack Developer",
-        company: "Tech Innovations Inc.",
-        duration: "Jan 2022 - Present",
+        role: "Upskilling Program – Full Stack Web Development",
+        company: "Brototype, Kochi",
+        duration: "Mar 2024 - Present",
         responsibilities: [
-            "Lead development of microservices architecture serving 100K+ users",
-            "Mentored junior developers and conducted code reviews",
-            "Implemented CI/CD pipelines reducing deployment time by 60%",
-            "Architected and developed RESTful APIs and GraphQL endpoints"
-        ]
-    },
-    {
-        id: 2,
-        role: "Full Stack Developer",
-        company: "Digital Solutions Ltd.",
-        duration: "Jun 2020 - Dec 2021",
-        responsibilities: [
-            "Developed and maintained multiple client-facing web applications",
-            "Collaborated with UX/UI designers to implement responsive designs",
-            "Optimized application performance resulting in 40% faster load times",
-            "Integrated third-party APIs and payment gateways"
-        ]
-    },
-    {
-        id: 3,
-        role: "Frontend Developer",
-        company: "StartUp Hub",
-        duration: "Jan 2019 - May 2020",
-        responsibilities: [
-            "Built responsive single-page applications using React",
-            "Implemented state management solutions with Redux",
-            "Wrote comprehensive unit and integration tests",
-            "Participated in agile development processes and daily standups"
+            "Currently undergoing intensive full-stack development training with hands-on project experience",
+            "Built and integrated RESTful APIs using Node.js and Express.js to handle server-side logic and data flow",
+            "Utilized MongoDB and PostgreSQL for scalable and efficient database management",
+            "Developed responsive and dynamic user interfaces using React, HTML, CSS, Bootstrap, and JavaScript",
+            "Strengthened problem-solving skills through Data Structures and Algorithms (DSA)",
+            "Completed multiple real-world projects including e-commerce and full-stack applications"
         ]
     }
 ];
@@ -169,16 +151,9 @@ export const experiences: Experience[] = [
 export const education: Education[] = [
     {
         id: 1,
-        degree: "B.Sc. Computer Science",
-        institution: "University of Technology",
-        year: "2015 - 2019",
-        description: "Graduated with honors, specialization in Software Engineering"
-    },
-    {
-        id: 2,
-        degree: "Full Stack Web Development Bootcamp",
-        institution: "Code Academy",
-        year: "2018",
-        description: "Intensive 12-week program covering modern web technologies"
+        degree: "Bachelor of Commerce (B.Com)",
+        institution: "Mahatma Gandhi University, Kerala",
+        year: "2018 - 2021",
+        description: "Graduated with a focus on commerce, accounting, and business fundamentals."
     }
 ];

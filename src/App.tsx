@@ -4,9 +4,8 @@ import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-
-
 import Contact from './components/Contact';
+import Chatbot from './components/Chatbot';
 import { useStars } from './hooks/useVanta';
 import './index.css';
 
@@ -63,12 +62,14 @@ function App() {
         <About />
         <Skills />
         <Projects />
-
-
         <Contact />
       </main>
+
+      {/* Grok-Powered AI Chatbot */}
+      <Chatbot />
     </div>
   );
 }
 
 export default App;
+
