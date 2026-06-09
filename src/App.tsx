@@ -25,12 +25,12 @@ function App() {
           clearInterval(timer);
           return 100;
         }
-        // Random organic increment values for a realistic feel
-        const increment = Math.floor(Math.random() * 8) + 2;
+        // Smaller organic increments to make the load duration longer (~3 seconds)
+        const increment = Math.floor(Math.random() * 4) + 1;
         const next = prev + increment;
         return next > 100 ? 100 : next;
       });
-    }, 45);
+    }, 75);
 
     return () => clearInterval(timer);
   }, []);
