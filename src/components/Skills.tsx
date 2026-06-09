@@ -3,9 +3,10 @@ import {
     SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiHtml5, SiCss3,
     SiTailwindcss, SiBootstrap, SiRedux, SiNodedotjs, SiExpress,
     SiMongodb, SiPostgresql, SiJsonwebtokens, SiSocketdotio,
-    SiGooglecloud, SiFirebase, SiNginx, SiGit, SiGithub
+    SiGooglecloud, SiFirebase, SiNginx, SiGit, SiGithub,
+    SiPostman, SiMysql
 } from 'react-icons/si';
-import { FaDatabase, FaAws } from 'react-icons/fa';
+import { FaDatabase, FaAws, FaNetworkWired, FaCode } from 'react-icons/fa';
 import type { IconType } from 'react-icons';
 
 // Map skill names to their respective icons and brand colors
@@ -15,22 +16,32 @@ const skillIcons: Record<string, { icon: IconType, color: string }> = {
     "React.js": { icon: SiReact, color: "#61DAFB" },
     "Next.js": { icon: SiNextdotjs, color: "#ffffff" },
     "HTML5": { icon: SiHtml5, color: "#E34F26" },
+    "HTML": { icon: SiHtml5, color: "#E34F26" },
     "CSS3": { icon: SiCss3, color: "#1572B6" },
+    "CSS": { icon: SiCss3, color: "#1572B6" },
     "Tailwind": { icon: SiTailwindcss, color: "#06B6D4" },
+    "Tailwind CSS": { icon: SiTailwindcss, color: "#06B6D4" },
     "Bootstrap": { icon: SiBootstrap, color: "#7952B3" },
     "Redux": { icon: SiRedux, color: "#764ABC" },
     "Node.js": { icon: SiNodedotjs, color: "#339933" },
     "Express.js": { icon: SiExpress, color: "#ffffff" },
     "MongoDB": { icon: SiMongodb, color: "#47A248" },
-    "SQL": { icon: SiPostgresql, color: "#336791" }, // Postgres blue
-    "JWT": { icon: SiJsonwebtokens, color: "#ffffff" }, // White for dark mode
+    "PostgreSQL": { icon: SiPostgresql, color: "#4169E1" },
+    "MySQL": { icon: SiMysql, color: "#4479A1" },
+    "SQL": { icon: SiPostgresql, color: "#336791" }, 
+    "JWT": { icon: SiJsonwebtokens, color: "#ffffff" }, 
     "WebSocket": { icon: SiSocketdotio, color: "#ffffff" },
     "AWS EC2": { icon: FaAws, color: "#FF9900" },
     "GCP": { icon: SiGooglecloud, color: "#4285F4" },
     "Firebase": { icon: SiFirebase, color: "#FFCA28" },
     "Nginx": { icon: SiNginx, color: "#009639" },
     "Git": { icon: SiGit, color: "#F05032" },
-    "GitHub": { icon: SiGithub, color: "#ffffff" }
+    "GitHub": { icon: SiGithub, color: "#ffffff" },
+    "Git & GitHub": { icon: SiGithub, color: "#ffffff" },
+    "Postman": { icon: SiPostman, color: "#FF6C37" },
+    "REST APIs": { icon: FaNetworkWired, color: "#00ff9d" },
+    "JWT Authentication": { icon: SiJsonwebtokens, color: "#ffffff" },
+    "Data Structures & Algorithms": { icon: FaCode, color: "#00ff9d" }
 };
 
 const Skills = () => {
