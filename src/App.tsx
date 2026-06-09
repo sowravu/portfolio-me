@@ -6,12 +6,49 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Chatbot from './components/Chatbot';
+import Loader from './components/Loader';
 import { useStars } from './hooks/useVanta';
 import './index.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [progress, setProgress] = useState(0);
+  const [showLoader, setShowLoader] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
   const starsRef = useStars();
+
+  // Preloader progress counter
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(timer);
+          return 100;
+        }
+        // Random organic increment values for a realistic feel
+        const increment = Math.floor(Math.random() * 8) + 2;
+        const next = prev + increment;
+        return next > 100 ? 100 : next;
+      });
+    }, 45);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Handle preloader unmount after fade-out transition
+  useEffect(() => {
+    if (progress === 100) {
+      const pauseTimeout = setTimeout(() => {
+        setFadeOut(true);
+        const unmountTimeout = setTimeout(() => {
+          setShowLoader(false);
+        }, 700); // Match duration-700 transition in Loader.tsx
+        return () => clearTimeout(unmountTimeout);
+      }, 300); // Show "100%" briefly for readability
+
+      return () => clearTimeout(pauseTimeout);
+    }
+  }, [progress]);
 
   useEffect(() => {
     const sections = ['home', 'about', 'skills', 'projects', 'contact'];
@@ -49,6 +86,9 @@ function App() {
 
   return (
     <div className="App">
+      {/* Premium preloader screen */}
+      {showLoader && <Loader progress={progress} fadeOut={fadeOut} />}
+
       {/* Falling Stars Background */}
       <canvas
         ref={starsRef}
@@ -72,4 +112,5 @@ function App() {
 }
 
 export default App;
+
 
